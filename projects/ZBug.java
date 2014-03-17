@@ -1,4 +1,5 @@
 import info.gridworld.actor.Bug;
+import info.gridworld.grid.Location;
 
 public class ZBug extends Bug {
     private int steps;
@@ -7,16 +8,16 @@ public class ZBug extends Bug {
     public ZBug(int l) {
         length = l;
         steps = 0;
-        super.setDirection(90);
+        super.setDirection(Location.WEST);
     }
 
     @Override
     public void act() {
         if (canMove() && steps < 3 * length){
             if (steps == length) {
-                super.setDirection(225);
+                super.setDirection(Location.SOUTHWEST);
             } else if (steps == 2 * length) {
-                super.setDirection(90);
+                super.setDirection(Location.WEST);
             }
             move();
             steps++;
