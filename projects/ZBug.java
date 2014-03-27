@@ -8,7 +8,7 @@ public class ZBug extends Bug {
     public ZBug(int l) {
         length = l;
         steps = 0;
-        super.setDirection(Location.WEST);
+        super.setDirection(Location.EAST);
     }
 
     @Override
@@ -17,7 +17,7 @@ public class ZBug extends Bug {
             if (steps == length) {
                 super.setDirection(Location.SOUTHWEST);
             } else if (steps == 2 * length) {
-                super.setDirection(Location.WEST);
+                super.setDirection(Location.EAST);
             }
             move();
             steps++;
