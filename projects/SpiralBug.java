@@ -19,7 +19,7 @@ public class SpiralBug extends Bug {
             turn();
             turn();
             steps = 0;
-            sideLength ++;
+            sideLength++;
         }
     }
 }

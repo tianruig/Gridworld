@@ -13,7 +13,7 @@ public class ZBug extends Bug {
 
     @Override
     public void act() {
-        if (canMove() && steps < 3 * length){
+        if (canMove() && steps < 3 * length) {
             if (steps == length) {
                 setDirection(Location.SOUTHWEST);
             } else if (steps == 2 * length) {

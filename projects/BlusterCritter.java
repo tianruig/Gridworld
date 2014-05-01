@@ -17,7 +17,7 @@ public class BlusterCritter extends Critter {
     // A BlusterCritter looks at all of the neighbors within two steps of its current location.
     @Override
     public ArrayList<Actor> getActors() {
-        ArrayList<Actor> actors = new ArrayList(24);
+        ArrayList<Actor> actors = new ArrayList<Actor>(24);
         Grid<Actor> gr = getGrid();
 
         Location currLoc = getLocation();
@@ -26,22 +26,20 @@ public class BlusterCritter extends Critter {
             for (int c = -2; c <= 2; c++) {
                 Location checkLoc = new Location(currLoc.getRow() + r, currLoc.getCol() + c);
 
-                if (gr.isValid(checkLoc)){
+                if (gr.isValid(checkLoc)) {
                     Actor a = gr.get(checkLoc);
 
-                     if (a != null && a != this){
+                    if (a != null && a != this) {
                         actors.add(gr.get(checkLoc));
                     }
                 }
             }
         }
-
-
         return actors;
     }
 
     @Override
-    public void processActors(ArrayList<Actor> a){
+    public void processActors(ArrayList<Actor> a) {
         int n = 0;
         for (Actor actor : a) {
             if (actor instanceof Critter) {

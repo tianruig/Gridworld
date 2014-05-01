@@ -22,7 +22,7 @@ import info.gridworld.grid.Location;
 public class DancingBugRunner {
     public static void main(String[] args) {
         ActorWorld world = new ActorWorld();
-        DancingBug alice = new DancingBug(new int[]{1, 2, 5, 7, 1, 4, 1 ,2 ,9, 4 ,1 ,3 ,5, 6});
+        DancingBug alice = new DancingBug(new int[]{1, 2, 5, 7, 1, 4, 1, 2, 9, 4, 1, 3, 5, 6});
         world.add(new Location(4, 4), alice);
         world.show();
     }
